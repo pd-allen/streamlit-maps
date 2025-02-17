@@ -2,6 +2,5 @@
 geopandas
 owslib
 streamlit
-pandas
 maplibre
-leafmap[maplibregl]
+leafmap[maplibre]
