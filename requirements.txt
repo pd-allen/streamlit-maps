@@ -4,3 +4,4 @@ leafmap
 owslib
 streamlit
 pandas
+leafmap.maplibregl
