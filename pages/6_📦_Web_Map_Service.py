@@ -4,7 +4,7 @@ import time
 import geopandas as gpd
 import leafmap.maplibregl as leafmap
 import pandas as pd
-import numpy as npimport leafmap.foliumap as leafmap
+import numpy as np
 
 st.set_page_config(layout="wide")
 
