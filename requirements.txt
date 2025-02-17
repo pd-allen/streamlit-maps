@@ -3,3 +3,8 @@ geopandas
 leafmap
 owslib
 streamlit
+pandas
+openrouteservice
+os
+requests
+leafmap.maplibregl
