@@ -1,6 +1,10 @@
 import ast
 import streamlit as st
-import leafmap.foliumap as leafmap
+import time
+import geopandas as gpd
+import leafmap.maplibregl as leafmap
+import pandas as pd
+import numpy as npimport leafmap.foliumap as leafmap
 
 st.set_page_config(layout="wide")
 
@@ -65,15 +69,8 @@ with row1_col2:
             )
 
     with row1_col1:
-        m = leafmap.Map(center=(36.3, 0), zoom=2)
-
-        if layers is not None:
-            for layer in layers:
-                m.add_wms_layer(
-                    url, layers=layer, name=layer, attribution=" ", transparent=True
-                )
-        if add_legend and legend_text:
-            legend_dict = ast.literal_eval(legend_text)
-            m.add_legend(legend_dict=legend_dict)
-
+        m = leafmap.Map(center=(36.3, 0), zoom=12)
+        m.add_basemap("OpenTopoMap",opacity=0.5)
+        m.add_layer_control()
+       
         m.to_streamlit(width, height)
