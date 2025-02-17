@@ -3,4 +3,4 @@ geopandas
 owslib
 streamlit
 maplibre
-leafmap[maplibre]
+leafmap.maplibregl
