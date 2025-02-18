@@ -1,5 +1,6 @@
 import os
 os.system('pip install leafmap[maplibre]')
+os.system('pip install openrouteservice')
 import ast
 import streamlit as st
 import time
