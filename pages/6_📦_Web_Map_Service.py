@@ -74,8 +74,35 @@ print(data['Longitude'][14])
 m = leafmap.Map(center=(41.6,13.6), layers_control=True,color_column=False,zoom=8)
 #m.add_points_from_xy(data, x="longitude", y="latitude",color="red",popup=["name","country"],layer_name='points')
 m.add_points_from_xy(data, x="Longitude", y="Latitude",color="red",popup=["Location","Date", "Comments"],layer_name='points')
-     
 
+url='https://raw.githubusercontent.com/pd-allen/pd-allen.github.io/main/docs/8thHussarsItaly.geojson'
+
+print(url)
+gdf = gpd.read_file(url)
+coordinates = list(gdf.geometry[0].coords)
+print(coordinates[:5])     
+source = {
+    "type": "geojson",
+    "data": {
+        "type": "Feature",
+        "geometry": {"type": "LineString", "coordinates": [coordinates[0]]},
+    },
+}
+m.add_source("trace", source)
+layer = {
+    "id": "trace",
+    "type": "line",
+    "source": "trace",
+    "paint": {"line-color": "red", "line-opacity": 0.75, "line-width": 5},
+}
+m.add_layer(layer)
+#m.jump_to({"center": coordinates[0], "zoom": 14})
+m.set_pitch(60)
+paint_line = {
+    "line-color": "red",
+    "line-width": 4,
+}
+m.add_geojson(url,layer_type="line", paint=paint_line, name="blocks-line")
 m.add_basemap("OpenTopoMap")
 
 m.to_streamlit(width, height)
