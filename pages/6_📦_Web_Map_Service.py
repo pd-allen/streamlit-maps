@@ -40,7 +40,7 @@ row1_col1, row1_col2 = st.columns([3, 1.3])
 width = None
 height = 600
 layers = None
-
+'''
 with row1_col2:
 
     esa_landcover = "https://services.terrascope.be/wms/v2"
@@ -69,7 +69,7 @@ with row1_col2:
                 value=legend,
                 height=200,
             )
-
+'''
     with row1_col1:
         m = leafmap.Map(center=(36.3, 0), zoom=12)
         m.add_basemap("OpenTopoMap",opacity=0.5)
