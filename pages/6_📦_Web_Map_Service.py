@@ -60,12 +60,12 @@ layers = None
 #fname='1stBttnCEF.xlsx'
 #fname="8thHussarsItaly.xlsx"
 #fname ="https://raw.githubusercontent.com/opengeos/data/main/world/world_cities.csv"
-fname= 'https://raw.githubusercontent.com/pd-allen/pd-allen.github.io/main/docs/8thHussarsItaly.csv'
+fname= 'https://raw.githubusercontent.com/pd-allen/pd-allen.github.io/main/docs/8thHussarsItaly.xlsx'
 #fn=fname[:len(fname)-5]
 #print(fname,fn)
 #fname= os.path.join(excelpath, fname)
-data= leafmap.csv_to_df(fname)
-#data =  pd.read_excel(fname,dtype={'Comments': str},na_values=[''])
+#data= leafmap.csv_to_df(fname)
+data =  pd.read_excel(fname,dtype={'Comments': str},na_values=[''])
 #print(data)
 # data['color_column2']='blue'
 
