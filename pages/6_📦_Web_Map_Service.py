@@ -1,4 +1,5 @@
-!%pip install "leafmap[maplibre]"
+import os
+os.system('pip install leafmap[maplibre]')
 import ast
 import streamlit as st
 import time
