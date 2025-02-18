@@ -64,8 +64,8 @@ with row1_col1:
     fn=fname[:len(fname)-5]
     print(fname,fn)
     #fname= os.path.join(excelpath, fname)
-
-    data =  pd.read_excel(fname,dtype={'Comments': str},na_values=[''])
+    data= leafmap.csv_to_df(fname)
+    #data =  pd.read_excel(fname,dtype={'Comments': str},na_values=[''])
     #print(data)
     data['color_column2']='blue'
 
@@ -73,16 +73,7 @@ with row1_col1:
 
     m.add_points_from_xy(data, x="Longitude", y="Latitude",color="red",popup=["Location","Date", "Comments"],layer_name='points')
     m
-    #fn ="test_collection.geojson"
-    m.add_geojson(fnj,layer_name='routename',style = {
-            "stroke": True,
-            "color": 'blue',
-            "weight": 4,
-            "opacity": 1,
-            "fill": False,
-            "fillColor": "#0000ff",
-            "fillOpacity": 0.1,
-        })
+   
 
     m.add_basemap("OpenTopoMap")
     m.to_streamlit(width, height)
