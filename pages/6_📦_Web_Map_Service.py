@@ -77,6 +77,6 @@ m = leafmap.Map(center=(50.0,3.0), layers_control=True,color_column=False,zoom=8
 
 m.add_basemap("OpenTopoMap")
 
-#m.to_streamlit(width, height)
+m.to_streamlit(width, height)
 
 
