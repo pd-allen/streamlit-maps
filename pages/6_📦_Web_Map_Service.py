@@ -81,28 +81,16 @@ print(url)
 gdf = gpd.read_file(url)
 coordinates = list(gdf.geometry[0].coords)
 print(coordinates[:5])     
-source = {
-    "type": "geojson",
-    "data": {
-        "type": "Feature",
-        "geometry": {"type": "LineString", "coordinates": [coordinates[0]]},
-    },
-}
-m.add_source("trace", source)
-layer = {
-    "id": "trace",
-    "type": "line",
-    "source": "trace",
-    "paint": {"line-color": "red", "line-opacity": 0.75, "line-width": 5},
-}
-m.add_layer(layer)
-#m.jump_to({"center": coordinates[0], "zoom": 14})
-m.set_pitch(60)
-paint_line = {
-    "line-color": "red",
-    "line-width": 4,
-}
-m.add_geojson(url,layer_type="line", paint=paint_line, name="blocks-line")
+
+m.add_geojson(url,layer_name='routename',style = {
+        "stroke": True,
+        "color": 'blue',
+        "weight": 4,
+        "opacity": 1,
+        "fill": False,
+        "fillColor": "#0000ff",
+        "fillOpacity": 0.1,
+    })
 m.add_basemap("OpenTopoMap")
 
 m.to_streamlit(width, height)
