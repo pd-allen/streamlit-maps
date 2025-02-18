@@ -68,7 +68,7 @@ fname= 'https://raw.githubusercontent.com/pd-allen/pd-allen.github.io/main/docs/
 data =  pd.read_excel(fname,dtype={'Comments': str},na_values=[''])
 #print(data)
 # data['color_column2']='blue'
-
+print(data['Longitude'][14])
 m = leafmap.Map(center=[data['Longitude'][14],data['Latitude'][14]], zoom=14)
 
 #m.add_points_from_xy(data, x="longitude", y="latitude",color="red",popup=["name","country"],layer_name='points')
