@@ -60,7 +60,7 @@ layers = None
 #fname='1stBttnCEF.xlsx'
 #fname="8thHussarsItaly.xlsx"
 #fname ="https://raw.githubusercontent.com/opengeos/data/main/world/world_cities.csv"
-fname= 'https://raw.githubusercontent.com/pd-allen.github.io/main/docs/8thHussarsItaly.csv'
+fname= 'https://raw.githubusercontent.com/pd-allen/pd-allen.github.io/main/docs/8thHussarsItaly.csv'
 #fn=fname[:len(fname)-5]
 #print(fname,fn)
 #fname= os.path.join(excelpath, fname)
