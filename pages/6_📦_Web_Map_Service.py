@@ -55,30 +55,28 @@ width = None
 height = 600
 layers = None
 
-with row1_col1:
     
-    #client = openrouteservice.Client(key='5b3ce3597851110001cf62488f9235173eab4627b5f0ba01e928ef81')
-    #fname='1stBttnCEF.xlsx'
-    #fname="8thHussarsItaly.xlsx"
-    fname ="https://raw.githubusercontent.com/opengeos/data/main/world/world_cities.csv"
-    #fname= 'https://pd-allen.github.io/docs/8thHussarsItaly.csv'
-    #fn=fname[:len(fname)-5]
-    #print(fname,fn)
-    #fname= os.path.join(excelpath, fname)
-    data= leafmap.csv_to_df(fname)
-    #data =  pd.read_excel(fname,dtype={'Comments': str},na_values=[''])
-    #print(data)
-   # data['color_column2']='blue'
+#client = openrouteservice.Client(key='5b3ce3597851110001cf62488f9235173eab4627b5f0ba01e928ef81')
+#fname='1stBttnCEF.xlsx'
+#fname="8thHussarsItaly.xlsx"
+fname ="https://raw.githubusercontent.com/opengeos/data/main/world/world_cities.csv"
+#fname= 'https://pd-allen.github.io/docs/8thHussarsItaly.csv'
+#fn=fname[:len(fname)-5]
+#print(fname,fn)
+#fname= os.path.join(excelpath, fname)
+data= leafmap.csv_to_df(fname)
+#data =  pd.read_excel(fname,dtype={'Comments': str},na_values=[''])
+#print(data)
+# data['color_column2']='blue'
 
-    m = leafmap.Map(center=(50.0,3.0), layers_control=True,color_column=False,zoom=8)
+m = leafmap.Map(center=(50.0,3.0), layers_control=True,color_column=False,zoom=8)
 
-    #m.add_points_from_xy(data, x="longitude", y="latitude",color="red",popup=["name","country"],layer_name='points')
-    #m.add_points_from_xy(data, x="Longitude", y="Latitude",color="red",popup=["Location","Date", "Comments"],layer_name='points')
+#m.add_points_from_xy(data, x="longitude", y="latitude",color="red",popup=["name","country"],layer_name='points')
+#m.add_points_from_xy(data, x="Longitude", y="Latitude",color="red",popup=["Location","Date", "Comments"],layer_name='points')
      
 
-    m.add_basemap("OpenTopoMap")
+m.add_basemap("OpenTopoMap")
 
-    #m.to_streamlit(width, height)
+#m.to_streamlit(width, height)
 
-with row1_col2:
-    print(data)
+
