@@ -78,4 +78,4 @@ with row1_col1:
 
     m.add_basemap("OpenTopoMap")
 
-    m.to_streamlit(width, height)
+    #m.to_streamlit(width, height)
