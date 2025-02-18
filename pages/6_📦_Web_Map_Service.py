@@ -79,3 +79,6 @@ with row1_col1:
     m.add_basemap("OpenTopoMap")
 
     #m.to_streamlit(width, height)
+
+with row1_col2:
+    print(data)
