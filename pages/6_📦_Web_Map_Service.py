@@ -74,8 +74,8 @@ with row1_col1:
 
     m.add_points_from_xy(data, x="longitude", y="latitude",color="red",popup=["name","country"],layer_name='points')
     #m.add_points_from_xy(data, x="Longitude", y="Latitude",color="red",popup=["Location","Date", "Comments"],layer_name='points')
-    m
-   
+     
 
     m.add_basemap("OpenTopoMap")
+
     m.to_streamlit(width, height)
