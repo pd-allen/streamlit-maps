@@ -6,3 +6,4 @@ leafmap
 maplibre
 geojson
 requests
+openpyxl
