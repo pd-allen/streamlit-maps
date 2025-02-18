@@ -62,7 +62,7 @@ with row1_col1:
     fname="8thHussarsItaly.xlsx"
     fn=fname[:len(fname)-5]
     print(fname,fn)
-    fname= os.path.join(excelpath, fname)
+    #fname= os.path.join(excelpath, fname)
 
     data =  pd.read_excel(fname,dtype={'Comments': str},na_values=[''])
     #print(data)
