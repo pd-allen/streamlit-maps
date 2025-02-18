@@ -5,5 +5,4 @@ streamlit
 leafmap
 maplibre
 geojson
-json
 requests
