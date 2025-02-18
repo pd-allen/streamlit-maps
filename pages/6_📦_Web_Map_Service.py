@@ -71,8 +71,8 @@ data= leafmap.csv_to_df(fname)
 
 m = leafmap.Map(center=(50.0,3.0), layers_control=True,color_column=False,zoom=8)
 
-m.add_points_from_xy(data, x="longitude", y="latitude",color="red",popup=["name","country"],layer_name='points')
-#m.add_points_from_xy(data, x="Longitude", y="Latitude",color="red",popup=["Location","Date", "Comments"],layer_name='points')
+#m.add_points_from_xy(data, x="longitude", y="latitude",color="red",popup=["name","country"],layer_name='points')
+m.add_points_from_xy(data, x="Longitude", y="Latitude",color="red",popup=["Location","Date", "Comments"],layer_name='points')
      
 
 m.add_basemap("OpenTopoMap")
