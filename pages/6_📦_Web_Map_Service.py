@@ -75,7 +75,7 @@ m = leafmap.Map(center=(41.6,13.6), layers_control=True,color_column=False,zoom=
 #m.add_points_from_xy(data, x="longitude", y="latitude",color="red",popup=["name","country"],layer_name='points')
 m.add_points_from_xy(data, x="Longitude", y="Latitude",color="red",popup=["Location","Date", "Comments"],layer_name='points')
 
-url='https://raw.githubusercontent.com/pd-allen/pd-allen.github.io/main/docs/8thHussarsItaly.geojson'
+url='https://raw.githubusercontent.com/pd-allen/pd-allen.github.io/main/docs/8thHussarsItaly.json'
 
 print(url)
 gdf = gpd.read_file(url)
