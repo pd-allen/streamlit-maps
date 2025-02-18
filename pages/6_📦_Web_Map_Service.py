@@ -5,7 +5,7 @@ import ast
 import streamlit as st
 import time
 import geopandas as gpd
-import leafmap.maplibregl as leafmap
+import leafmap as leafmap
 import pandas as pd
 import numpy as np
 #import openrouteservice
