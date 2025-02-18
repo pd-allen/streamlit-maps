@@ -71,7 +71,7 @@ data =  pd.read_excel(fname,dtype={'Comments': str},na_values=[''])
 print(data['Longitude'][14])
 #m = leafmap.Map(center=[data['Longitude'][14],data['Latitude'][14]], zoom=14)
 #m = leafmap.Map(center=(13.6,41.5),layers_control=True, zoom=8)
-m = leafmap.Map(center=(13.0,41.0), layers_control=True,color_column=False,zoom=8)
+m = leafmap.Map(center=(41.6,13.6), layers_control=True,color_column=False,zoom=8)
 #m.add_points_from_xy(data, x="longitude", y="latitude",color="red",popup=["name","country"],layer_name='points')
 m.add_points_from_xy(data, x="Longitude", y="Latitude",color="red",popup=["Location","Date", "Comments"],layer_name='points')
      
