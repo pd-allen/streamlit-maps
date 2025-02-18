@@ -70,9 +70,9 @@ with row1_col2:
                 height=200,
             )
 '''
-    with row1_col1:
-        m = leafmap.Map(center=(36.3, 0), zoom=12)
-        m.add_basemap("OpenTopoMap",opacity=0.5)
-        m.add_layer_control()
+with row1_col1:
+    m = leafmap.Map(center=(36.3, 0), zoom=12)
+    m.add_basemap("OpenTopoMap",opacity=0.5)
+    m.add_layer_control()
        
-        m.to_streamlit(width, height)
+    m.to_streamlit(width, height)
