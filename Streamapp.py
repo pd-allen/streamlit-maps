@@ -1,12 +1,12 @@
 import streamlit as st
-import leafmap
+import leafmap.foliumap as leafmap
 st.set_page_config(layout="wide")
 st.title("🌍 GeoTIFF Viewer")
 
 # Sidebar for user input
 with st.sidebar:
     st.header("Settings")
-    tif_file = st.text_input("Enter path to your GeoTIFF file", "HoogeIFFM.tif")
+    tif_file = st.text_input("Enter path to your GeoTIFF file", "Your-file.tif")
     colormap = st.selectbox("Choose a colormap", ["terrain", "viridis", "plasma", "gray", "inferno"])
 
 # Create the map
