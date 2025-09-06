@@ -16,9 +16,9 @@ m = leafmap.Map(center=[45.4215, -75.6998], zoom=12)
 # Add the raster layer
 if tif_file:
     try:
-        m.add_raster(tif_file, layer_name="GeoTIFF Layer", colormap=colormap)
+        m.add_raster(tif_file, layer_name="GeoTIFF Layer")
     except Exception as e:
         st.error(f"Error loading TIFF: {e}")
 
 # Display the map
-m.to_streamlit(height=800)
+m.to_streamlit(height=900)
