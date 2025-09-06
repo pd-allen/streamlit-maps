@@ -6,7 +6,7 @@ st.title("🌍 GeoTIFF Viewer")
 # Sidebar for user input
 with st.sidebar:
     st.header("Settings")
-    tif_file = st.text_input("Enter path to your GeoTIFF file", "your_file.tif")
+    tif_file = st.text_input("Enter path to your GeoTIFF file", "HoogeIFFM.tif")
     colormap = st.selectbox("Choose a colormap", ["terrain", "viridis", "plasma", "gray", "inferno"])
 
 # Create the map
