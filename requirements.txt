@@ -7,3 +7,4 @@ maplibre
 geojson
 requests
 openpyxl
+xarray
