@@ -3,7 +3,7 @@ geopandas
 owslib
 streamlit
 leafmap
-localtileserver
+localtileserver==0.10.6
 maplibre
 geojson
 requests
