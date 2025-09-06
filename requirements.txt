@@ -3,11 +3,11 @@ geopandas
 owslib
 streamlit
 leafmap
+localtileserver
 maplibre
 geojson
 requests
 openpyxl
 xarray
 rasterio
-localtileserver
 psutil
