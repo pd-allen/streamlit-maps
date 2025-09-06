@@ -11,7 +11,7 @@ with st.sidebar:
     colormap = st.selectbox("Choose a colormap", ["terrain", "viridis", "plasma", "gray", "inferno"])
 
 # Create the map
-m = leafmap.Map(center=[45.4215, -75.6998], zoom=10)
+m = leafmap.Map(center=[45.4215, -75.6998], zoom=12
 
 # Add the raster layer
 if tif_file:
@@ -21,4 +21,4 @@ if tif_file:
         st.error(f"Error loading TIFF: {e}")
 
 # Display the map
-m.to_streamlit(height=600)
+m.to_streamlit(height=800)
