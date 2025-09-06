@@ -4,6 +4,7 @@ owslib
 streamlit
 leafmap
 maplibre
+localtileserver
 geojson
 requests
 openpyxl
